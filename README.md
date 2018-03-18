@@ -1,3 +1,8 @@
-# *My First Website* - **ewa1siwek**
+# *My First Branch* - ewa1siwek
 
-It just for practice.
+Initial branch.
+* It just for study.
+* It just for practice.
+* It just for check.
+
+[Founding link](http://infoshareacademy.com/)
