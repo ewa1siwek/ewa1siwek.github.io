@@ -29,7 +29,7 @@ h2 {
     width: 120px;
     height: 120px;
     bottom: -21%;
-    left: 27%;
+    left: 25%;
     }
 
 .clearfix::after {
@@ -41,7 +41,7 @@ h2 {
 .header__topbar__navigation {
     float: left;
     position: absolute;
-    left: 37%;
+    left: 35%;
 
 }
 
