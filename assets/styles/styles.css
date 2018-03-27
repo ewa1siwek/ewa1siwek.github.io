@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+a.menu {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+
+}
+
+
+.header__topbar {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background: #5d5d5d;
+}
+
+.header__logo {
+    float: left;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 15%;
+    padding-bottom: 20px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.header__topbar__navigation {
+    float: left;
+    position: absolute;
+    left: 25%;
+
+}
+
+.header__topbar__navigation-item {
+    float: left;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: #5d5d5d;
+    text-transform: uppercase;
+    line-height: 65px;
+    border-top: 5px red solid;
+    transition-duration: 0.5s;
+
+}
+#menu--work {
+    border-top: 5px #ffc419 solid;
+}
+
+#menu--work:hover {
+    background: #ffc419;
+    color: black;
+}
+#menu--features {
+    border-top: 5px #ff7c20 solid;
+}
+
+
+.header__hero {
+    height: 100vh;
+    background-image: url(../images/hero-background-city.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 80px;
+}
