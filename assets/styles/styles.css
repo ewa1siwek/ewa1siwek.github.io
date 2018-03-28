@@ -13,8 +13,15 @@ h1 {
 h2 {
     text-align: center;
     font-size: 2em;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     padding-top: 50px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 35px;
 }
 
 h4 {
@@ -170,6 +177,23 @@ a.menu {
 .header__hero__cta-button-item:hover {
     color: #fff;
     background: #208291;
+}
+
+.main__feature {
+    float: left;
+    width: 50%;
+    border: #208291 1px solid;
+}
+
+.main__feature--icon-container {
+    float: left;
+    width: 40px;
+    padding: 15px;
+    text-align: center;
+}
+.main__feature--description {
+    float: left;
+    width: calc(100% - 40px);
 }
 
 .clearfix::before {
