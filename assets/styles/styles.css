@@ -192,24 +192,17 @@ a.menu {
     float: left;
     position: relative;
     margin: 0px 15px;
-    border: #208291 1px solid;
+    border: #208291 0.5px solid;
+}
 
-}
-.main__team:hover {
-    z-index: 2;
-}
 
 .team__photo {
+    max-width: 100%;
     float: left;
 }
 
-.team__photo:hover {
-    z-index: 6;
-}
-
-
 .main__team__namebox {
-    height: 70px;
+    height: 65px;
     width: 160px;
     border: #208291 1px solid;
     float: left;
@@ -223,7 +216,7 @@ a.menu {
 }
 
 .main__team__namebox:hover {
-    visibility: hidden;
+
 }
 .team__p__namebox {
     text-align: center;
@@ -235,7 +228,7 @@ a.menu {
 }
 .team__description {
     height: 180px;
-    width: 210px;
+    max-width: 100%;
     float: left;
     padding: 35px 4px 0px 8px;
     text-align: center;
@@ -243,14 +236,13 @@ a.menu {
     background-color: white;
     bottom: 5%;
     margin-bottom: -9%;
-    border-left: #208291 0.1px solid;
     border-right: #208291 0.1px solid;
-    border-bottom: #208291 0.1px solid;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 .team__description:hover {
-    visibility: hidden;
+
 }
 
 .main__team__button {
