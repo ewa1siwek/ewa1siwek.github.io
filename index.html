@@ -242,7 +242,31 @@
             </table>
         </section>
 
-        <section class="section" id="contact"><h2>Contact</h2></section>
+        <section class="section" id="contact">
+            <h2>Contact</h2>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" type="text" required>
+                <label for="phone">Phone</label>
+                <input id="phone" type="number" required>
+                <label for="e-mail">E-mail</label>
+                <input id="e-mail" type="email" required>
+            </div>
+            <div>
+                <label for="role-client">Client</label>
+                <input id="role-client" value="client" type="radio">
+                <label for="role-investor">Investor</label>
+                <input id="role-investor" value="investor" type="radio">
+                <label for="role-other">Other</label>
+                <input id="role-other" value="other" type="radio">
+                <label for="contact-sms">Contact via SMS</label>
+                <input id="contact-sms" type="checkbox">
+            </div>
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" rows="10"></textarea>
+            </div>
+        </section>
 
 
     </main>
