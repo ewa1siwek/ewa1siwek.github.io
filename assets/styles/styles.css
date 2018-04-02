@@ -351,3 +351,37 @@ a.menu {
     display: block;
     clear: both;
 }
+
+.prices__table {
+    max width: 75vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+th, td {
+    border: 1.5px solid #208291;
+    vertical-align: middle;
+    text-align: center;
+    height: 45px;
+    width: 200px;
+}
+
+th {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: white;
+    background-color: #208291;
+    border: 1.5px solid black;
+}
+
+tr:nth-child(2n) {
+    background-color: #f0faff;
+}
+
+
+
+
+
+
