@@ -28,10 +28,17 @@
                     <li class="header__topbar__navigation-item" id="menu--blog">
                         <a class="menu" href="#blog">Blog</a>
                     </li>
-                    <li class="header__topbar__navigation-item" id="menu--company"><a class="menu" href="#company">Company</a></li>
-                    <li class="header__topbar__navigation-item" id="menu--team"><a class="menu" href="#team">Team</a></li>
-                    <li class="header__topbar__navigation-item" id="menu--prices"><a class="menu" href="#prices">Prices</a></li>
-                    <li class="header__topbar__navigation-item" id="menu--contact"><a class="menu" href="#contact">Contact</a></li>
+                    <li class="header__topbar__navigation-item" id="menu--company">
+                        <a class="menu" href="#company">Company</a>
+                    </li>
+                    <li class="header__topbar__navigation-item" id="menu--team">
+                        <a class="menu" href="#team">Team</a></li>
+                    <li class="header__topbar__navigation-item" id="menu--prices">
+                        <a class="menu" href="#prices">Prices</a>
+                    </li>
+                    <li class="header__topbar__navigation-item" id="menu--contact">
+                        <a class="menu" href="#contact">Contact</a>
+                    </li>
                 </ul>
 
             </nav>
@@ -44,15 +51,15 @@
                 <div class="header__hero__cta-button">
                     <button class="header__hero__cta-button-item">Sea features</button>
                     <button class="header__hero__cta-button-item">Purchase now</button>
-
                 </div>
-
             </div>
         </div>
     </header>
 
     <main>
-        <section class="section" id="cta"><h2>Steal of the month</h2></section>
+        <section class="section" id="cta">
+            <h2>Steal of the month</h2>
+        </section>
         <section class="section" id="work"><h2>Lates works</h2></section>
         <section class="section" id="features">
             <h2>Superb features</h2>
@@ -244,28 +251,40 @@
 
         <section class="section" id="contact">
             <h2>Contact</h2>
-            <div>
-                <label for="name">Name</label>
-                <input id="name" type="text" required>
-                <label for="phone">Phone</label>
-                <input id="phone" type="number" required>
-                <label for="e-mail">E-mail</label>
-                <input id="e-mail" type="email" required>
+            <h3 class="h3--contact">Add comment</h3>
+            <div class="data">
+                <div class="data--item">
+                    <label class="label--data--item">Name</label>
+                    <input id="name" type="text" required>
+                </div>
+                <div class="data--item">
+                    <label class="label--data--item" for="phone">Phone</label>
+                    <input id="phone" type="text" required>
+                </div>
+                <div class="data--item">
+                    <label class="label--data--item" for="e-mail">E-mail</label>
+                    <input id="e-mail" type="email" required>
+                </div>
             </div>
-            <div>
-                <label for="role-client">Client</label>
-                <input id="role-client" value="client" type="radio">
-                <label for="role-investor">Investor</label>
-                <input id="role-investor" value="investor" type="radio">
-                <label for="role-other">Other</label>
-                <input id="role-other" value="other" type="radio">
-                <label for="contact-sms">Contact via SMS</label>
-                <input id="contact-sms" type="checkbox">
+            <div class="role">
+                <label class="data--role-item" for="role-client">Client</label>
+                <input id="role-client" name="role" value="client" type="radio">
+                <label class="data--role-item" for="role-investor">Investor</label>
+                <input id="role-investor" name="role" value="investor" type="radio">
+                <label class="data--role-item" for="role-other">Other</label>
+                <input id="role-other" name="role" value="other" type="radio">
             </div>
-            <div>
-                <label for="message">Message</label>
-                <textarea id="message" rows="10"></textarea>
+                <div class="sms">
+                    <label for="contact-sms">Contact via SMS</label>
+                    <input id="contact-sms" type="checkbox">
+                </div>
+
+                <div>
+                    <label class="label--message--item" for="message">Message</label>
+                    <textarea id="message" rows="10"></textarea>
+                </div>
             </div>
+            <button class="submit--form-button-item">Add comment</button>
         </section>
 
 
