@@ -258,6 +258,10 @@ a.menu {
     float: right;
     padding: 0 5px;
 }
+#company {
+    background-color: #208291;
+}
+
 
 .team--container {
     display: flex;
