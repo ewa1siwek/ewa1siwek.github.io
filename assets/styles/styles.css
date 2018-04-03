@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Asap', sans-serif;
 }
@@ -13,8 +14,9 @@ h1 {
 h2 {
     text-align: center;
     font-size: 2em;
-    padding-bottom: 100px;
+    margin-bottom: 10px;
     padding-top: 50px;
+    margin-top: 25px;
 }
 
 h3 {
@@ -32,6 +34,7 @@ h4 {
 a {
     text-decoration: none;
 }
+
 .header__topbar {
     width: 98%;
     height: 80px;
@@ -48,7 +51,7 @@ a {
     height: 120px;
     bottom: -24%;
     left: 25%;
-    }
+}
 
 .clearfix::after {
     content: '';
@@ -60,21 +63,19 @@ a {
     float: left;
     position: absolute;
     left: 35%;
-
 }
 
 .header__topbar__navigation-item {
     float: left;
-    width: 80px;
+    width: 75px;
     height: 80px;
     text-align: center;
     background-color: #5d5d5d;
     text-transform: uppercase;
     line-height: 70px;
     transition-duration: 0.5s;
-
-
 }
+
 #menu--work {
     border-top: 5px #ffc419 solid;
 }
@@ -138,6 +139,7 @@ a {
 #menu--contact:hover {
     background: #28ff24;
 }
+
 a.menu {
     text-decoration: none;
     color: #fff;
@@ -151,7 +153,6 @@ a.menu {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-
 }
 
 .header__hero__content {
@@ -198,6 +199,7 @@ a.menu {
     padding: 15px;
     text-align: center;
 }
+
 .feature--description {
     float: left;
     width: calc(100% - 40px);
@@ -207,6 +209,12 @@ a.menu {
     content: '';
     display: block;
     clear: both;
+}
+
+.h2-underline--blog {
+    text-align: center;
+    color: #e8e7e7;
+    margin-bottom: 110px;
 }
 
 .blog--container {
@@ -235,6 +243,7 @@ a.menu {
     padding: 20px 0 15px 0;
     float: left;
 }
+
 .blog-item--description {
     float: left;
     padding: 15px 0;
@@ -248,10 +257,13 @@ a.menu {
     color: #208291;
 }
 
+.blog-item--foot > a:hover {
+    color: #5e0591;
+}
+
 .blog-item--icon-container{
     float: right;
     color: #208291;
-
 }
 
 .blog-item--number {
@@ -268,6 +280,16 @@ a.menu {
     float: left;
 }
 
+.h2__company {
+    color: white;
+}
+
+.h2-underline__company {
+    color: white;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
 .company--container {
     width: 800px;
     position: absolute;
@@ -276,13 +298,8 @@ a.menu {
     transform: translate(-50%, -50%);
     display: block;
     margin: 0 50px;
-
 }
 
-@media
-all and (max-width: ){
-
-}
 .company--expirience {
     float: left;
     margin-bottom: 60px;
@@ -337,21 +354,22 @@ all and (max-width: ){
     margin-right: 30px;
 }
 
-
-
 .clearfix::after {
     content: '';
     display: block;
     clear: both;
 }
 
-
+.h2-underline__team {
+    text-align: center;
+    color: #e8e7e7;
+    margin-bottom: 110px;
+}
 
 .team--container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
 .team-item {
@@ -364,7 +382,6 @@ all and (max-width: ){
     margin: 0 10px;
     border: #208291 0.5px solid;
 }
-
 
 .team-item--photo {
     max-width: 100%;
@@ -382,12 +399,11 @@ all and (max-width: ){
     transform: translateX(-50%) translateY(-50%);
     z-index: 3;
     background-color: white;
-
 }
 
 .team-item--namebox:hover {
-
 }
+
 .team-item__namebox__p {
     text-align: center;
 }
@@ -396,6 +412,7 @@ all and (max-width: ){
     color: #208291;
     font-weight: bold;
 }
+
 .team-item__description {
     height: 180px;
     max-width: 100%;
@@ -409,10 +426,6 @@ all and (max-width: ){
     border-right: #208291 0.1px solid;
     z-index: 2;
     box-sizing: border-box;
-}
-
-.team-item__description:hover {
-
 }
 
 .team-item__button {
@@ -429,19 +442,27 @@ all and (max-width: ){
     left:50%;
     transform: translateX(-50%) translateY(-180%);
     position: absolute;
-
 }
 
 .team-item__button:hover {
     background-color: #208291;
     color: #fff;
-
 }
 
 #team:after {
     content: '';
     display: block;
     clear: both;
+}
+
+.h2__prices {
+    color: #208291;
+}
+
+.h2-underline__prices {
+    text-align: center;
+    color: #208291;
+    margin-bottom: 110px;
 }
 
 .prices__table {
@@ -471,6 +492,13 @@ th {
 tr:nth-child(2n) {
     background-color: #f0faff;
 }
+
+.h2-underline__contact {
+    text-align: center;
+    color: #e8e7e7;
+    margin-bottom: 110px;
+}
+
 #contact {
     background-color: #f0faff;
 }
@@ -480,6 +508,7 @@ tr:nth-child(2n) {
     font-weight: 700;
     margin-left: 20px;
 }
+
 label {
     line-height: 35px;
 }
@@ -494,12 +523,14 @@ label {
 .sms {
     margin: 0 20px;
 }
+
 .data {
     width: 100%;
     display: block;
     float: left;
     position: relative;
 }
+
 .data--item {
     display: inline-block;
     float: left;
@@ -526,7 +557,6 @@ textarea {
     height: 35px;
     margin-bottom: 60px;
     margin-left: 490px;
-
 }
 
 .submit--form-button-item:hover {
