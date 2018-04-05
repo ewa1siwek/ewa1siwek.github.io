@@ -493,61 +493,67 @@ tr:nth-child(2n) {
     background-color: #f0faff;
 }
 
-.h2-underline__contact {
+.form {
+    background-color: #f0faff;
+}
+
+.form__headers-underline {
     text-align: center;
     color: #e8e7e7;
     margin-bottom: 110px;
 }
 
-#contact {
-    background-color: #f0faff;
-}
-
-.h3--contact {
+.form__header-3rd {
     text-align: left;
     font-weight: 700;
     margin-left: 20px;
 }
 
-label {
-    line-height: 35px;
+.form__container {
+    width: 900px;
 }
-
-.label--data--item,
-.label--message--item{
-    display: block;
-    margin: 0 20px;
-}
-
-.role,
-.sms {
-    margin: 0 20px;
-}
-
-.data {
-    width: 100%;
+.form__data {
+    width: 900px;
     display: block;
     float: left;
     position: relative;
 }
 
-.data--item {
+.form__data-item {
     display: inline-block;
     float: left;
     position: relative;
 }
 
-input {
-    margin: 0 20px;
-    resize: vertical;
+.form__label {
+    line-height: 35px;
 }
 
-textarea {
-    width: 600px;
+.form__label--data-item,
+.form__label--message {
+    display: block;
+    margin: 0 20px;
+    width: 33.333%;
+}
+
+.form__input {
+    margin: 0 20px;
+}
+
+
+.form__role,
+.form__sms {
+    margin: 0 20px;
+}
+
+
+
+.form__textarea {
+    width: 595px;
     margin: 0 20px 30px;
 }
 
-.submit--form-button-item {
+.form__button {
     text-transform: uppercase;
     border: #208291 1px solid;
     background-color: white;
@@ -559,7 +565,7 @@ textarea {
     margin-left: 490px;
 }
 
-.submit--form-button-item:hover {
+.form__button:hover {
     background-color: #208291;
     color: white;
 }

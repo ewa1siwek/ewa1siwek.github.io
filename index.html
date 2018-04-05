@@ -306,51 +306,49 @@
             </table>
         </section>
 
-        <section class="section" id="contact">
+        <section class="section form" id="contact">
             <h2>Contact</h2>
-            <p class="h2-underline__contact">
+            <p class="form__headers-underline">
                 <i class="fas fa-minus"></i><i class="fas fa-minus"></i><i class="fas fa-minus"></i><i class="fas fa-minus"></i>
             </p>
-            <div class="contact--container">
-            <h3 class="h3--contact">Add comment</h3>
+             <h3 class="form__header-3rd">Add comment</h3>
+            <div class="form__container">
 
-            <div class="data">
-                <div class="data--item">
-                    <label class="label--data--item">Name</label>
-                    <input id="name" type="text" required>
+                <div class="form__data">
+                    <div class="form__data-item">
+                        <label class="form__label form__label--data-item" for="name">Name</label>
+                        <input class="form__input" id="name" type="text" required>
+                    </div>
+                    <div class="form__data-item">
+                        <label class="form__label form__label--data-item" for="phone">Phone</label>
+                        <input class="form__input" id="phone" type="text" required>
+                    </div>
+                    <div class="form__data-item">
+                        <label class="form__label form__label--data-item" for="e-mail">E-mail</label>
+                        <input class="form__input" id="e-mail" type="email" required>
+                    </div>
                 </div>
-                <div class="data--item">
-                    <label class="label--data--item" for="phone">Phone</label>
-                    <input id="phone" type="text" required>
+                <div class="form__role">
+                    <label class="form__label form__label--role-item" for="role-client">Client</label>
+                    <input class="form__input" id="role-client" name="role" value="client" type="radio">
+                    <label class="form__label form__label--role-item" for="role-investor">Investor</label>
+                    <input class="form__input" id="role-investor" name="role" value="investor" type="radio">
+                    <label class="form__label form__label--role-item" for="role-other">Other</label>
+                    <input class="form__input" id="role-other" name="role" value="other" type="radio">
                 </div>
-                <div class="data--item">
-                    <label class="label--data--item" for="e-mail">E-mail</label>
-                    <input id="e-mail" type="email" required>
-                </div>
-            </div>
-            <div class="role">
-                <label class="data--role-item" for="role-client">Client</label>
-                <input id="role-client" name="role" value="client" type="radio">
-                <label class="data--role-item" for="role-investor">Investor</label>
-                <input id="role-investor" name="role" value="investor" type="radio">
-                <label class="data--role-item" for="role-other">Other</label>
-                <input id="role-other" name="role" value="other" type="radio">
-            </div>
-                <div class="sms">
-                    <label for="contact-sms">Contact via SMS</label>
+                <div class="form__sms">
+                    <label  class="form__label" for="contact-sms">Contact via SMS</label>
                     <input id="contact-sms" type="checkbox">
                 </div>
-                    <label class="label--message--item" for="message">Message</label>
-                    <textarea id="message" rows="10"></textarea>
+                <div>
+                    <label class="form__label form__label--message" for="message">Message</label>
+                    <textarea  class="form__textarea" id="message" rows="10"></textarea>
+                </div>
+                <div>
+                    <button class="form__button">Add comment</button>
                 </div>
             </div>
-            </div>
-            <button class="submit--form-button-item">Add comment</button>
-            </div>
         </section>
-        </section>
-
-
     </main>
     <footer class="footer--main">
         <section>
