@@ -6,12 +6,16 @@ body {
     font-family: 'Asap', sans-serif;
 }
 
-h1 {
+a {
+    text-decoration: none;
+}
+
+.header__h1 {
     font-size: 3.2em;
     line-height: 65px
 }
 
-h2 {
+.section__h2 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 10px;
@@ -19,20 +23,16 @@ h2 {
     margin-top: 25px;
 }
 
-h3 {
+.section__h3 {
     text-align: center;
     font-size: 1.3em;
     line-height: 35px;
 }
 
-h4 {
+.section__h4 {
     text-align: center;
     font-size: 1.2em;
     line-height: 35px;
-}
-
-a {
-    text-decoration: none;
 }
 
 .header__topbar {
@@ -59,13 +59,13 @@ a {
     clear: both;
 }
 
-.header__topbar__navigation {
+.header__navigation {
     float: left;
     position: absolute;
     left: 35%;
 }
 
-.header__topbar__navigation-item {
+.header__navigation-item {
     float: left;
     width: 75px;
     height: 80px;
@@ -76,71 +76,71 @@ a {
     transition-duration: 0.5s;
 }
 
-#menu--work {
+.header__navigation-item--work {
     border-top: 5px #ffc419 solid;
 }
 
-#menu--work:hover {
+.header__navigation-item--work:hover {
     background: #ffc419;
 }
 
-#menu--features {
+.header__navigation-item--features{
     border-top: 5px #ff7c20 solid;
 }
 
-#menu--features:hover {
+.header__navigation-item--features:hover {
     background: #ff7c20;
 }
 
-#menu--opinions {
+.header__navigation-item--opinions {
     border-top: 5px #ff2b5c solid;
 }
 
-#menu--opinions:hover {
+.header__navigation-item--opinions:hover {
     background: #ff2b5c;
 }
 
-#menu--blog {
+.header__navigation-item--blog {
     border-top: 5px #b312cb solid;
 }
 
-#menu--blog:hover {
+.header__navigation-item--blog:hover {
     background: #b312cb;
 }
 
-#menu--company {
+.header__navigation-item--company {
     border-top: 5px #4d1fff solid;
 }
 
-#menu--company:hover {
+.header__navigation-item--company:hover {
     background: #4d1fff;
 }
 
-#menu--team {
+.header__navigation-item--team {
     border-top: 5px #2986ff solid;
 }
 
-#menu--team:hover {
+.header__navigation-item--team:hover {
     background: #2986ff;
 }
 
-#menu--prices {
+.header__navigation-item--prices {
     border-top: 5px #21ffe4 solid;
 }
 
-#menu--prices:hover {
+.header__navigation-item--prices:hover {
     background: #21ffe4;
 }
 
-#menu--contact {
+.header__navigation-item--contact {
     border-top: 5px #28ff24 solid;
 }
 
-#menu--contact:hover {
+.header__navigation-item--contact:hover {
     background: #28ff24;
 }
 
-a.menu {
+.menu__topbar {
     text-decoration: none;
     color: #fff;
     font-size: 13px;
@@ -155,7 +155,7 @@ a.menu {
     position: relative;
 }
 
-.header__hero__content {
+.header__content {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -163,11 +163,11 @@ a.menu {
     transform: translate(-50%, -30%);
 }
 
-.header__hero__h1 {
+.header__h1--span {
     color: #208291;
 }
 
-.header__hero__cta-button-item {
+.header__cta-button-item {
     text-transform: uppercase;
     height: 35px;
     width: 130px;
@@ -178,7 +178,7 @@ a.menu {
     font-weight: bold;
 }
 
-.header__hero__cta-button-item:hover {
+.header__cta-button-item:hover {
     color: #fff;
     background: #208291;
 }
@@ -193,14 +193,14 @@ a.menu {
     border: #208291 1px solid;
 }
 
-.feature--icon-container {
+.feature__icon-container {
     float: left;
     width: 40px;
     padding: 15px;
     text-align: center;
 }
 
-.feature--description {
+.feature__description {
     float: left;
     width: calc(100% - 40px);
 }
@@ -217,7 +217,7 @@ a.menu {
     margin-bottom: 110px;
 }
 
-.blog--container {
+.blog__container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -249,15 +249,15 @@ a.menu {
     padding: 15px 0;
 }
 
-.blog-item--foot {
+.blog-item__foot {
     float: left;
 }
 
-.blog-item--foot > a {
+.blog-item__foot > a {
     color: #208291;
 }
 
-.blog-item--foot > a:hover {
+.blog-item__foot > a:hover {
     color: #5e0591;
 }
 
@@ -290,24 +290,24 @@ a.menu {
     margin-bottom: 110px;
 }
 
-.company--container {
+.company__container {
     width: 800px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    margin: 0 50px;
+    margin: 20px 50px 0 50px;
 }
 
-.company--expirience {
+.company__expirience {
     float: left;
     margin-bottom: 60px;
     margin-top: 160px;
     width: 200px;
 }
 
-.company--radius {
+.company__radius {
     width: 160px;
     height: 160px;
     border: 3px white solid;
@@ -319,7 +319,7 @@ a.menu {
     transform: translateX(5%);
 }
 
-.company--radius-icon {
+.company__radius--icon {
     float: left;
     color: white;
     font-size: 40px;
@@ -335,18 +335,18 @@ a.menu {
     transform: translate(-50%, -50%);
 }
 
-.company--description {
+.company__description {
     color: #ffffff;
     text-align: center;
     float: left;
     margin: -30px 0 0 5px;
 }
 
-.company--number {
+.company__description--number {
     font-size: 2.5em;
 }
 
-.company--transfer {
+.company__transfer {
     color: white;
     font-size: 25px;
     float: left;
@@ -360,13 +360,13 @@ a.menu {
     clear: both;
 }
 
-.h2-underline__team {
+.h2-underline--team {
     text-align: center;
     color: #e8e7e7;
     margin-bottom: 110px;
 }
 
-.team--container {
+.team {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -404,7 +404,7 @@ a.menu {
 .team-item--namebox:hover {
 }
 
-.team-item__namebox__p {
+.team-item__p {
     text-align: center;
 }
 
@@ -503,7 +503,7 @@ tr:nth-child(2n) {
     margin-bottom: 110px;
 }
 
-.form__header-3rd {
+.form__h3 {
     text-align: left;
     font-weight: 700;
     margin-left: 20px;
@@ -545,8 +545,6 @@ tr:nth-child(2n) {
 .form__sms {
     margin: 0 20px;
 }
-
-
 
 .form__textarea {
     width: 595px;
