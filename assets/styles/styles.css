@@ -166,16 +166,22 @@ a {
 .header__h1--span {
     color: #208291;
 }
+.header__cta-button {
+    text-align: center;
+    display: inline-block;
+}
 
 .header__cta-button-item {
     text-transform: uppercase;
-    height: 35px;
-    width: 130px;
+    height: 40px;
+    width: 150px;
     margin: 50px 10px 0px 10px;
     background: rgba(32, 130, 145, 0.08);
     border: 1px solid #208291;
     color: #208291;
     font-weight: bold;
+    display: inline-block;
+
 }
 
 .header__cta-button-item:hover {
@@ -513,16 +519,18 @@ tr:nth-child(2n) {
     width: 900px;
 }
 .form__data {
-    width: 900px;
+    width: 100%;
     display: block;
     float: left;
     position: relative;
+    margin: 0 20px;
 }
 
 .form__data-item {
     display: inline-block;
     float: left;
     position: relative;
+    width: 33.333%;
 }
 
 .form__label {
@@ -532,14 +540,16 @@ tr:nth-child(2n) {
 .form__label--data-item,
 .form__label--message {
     display: block;
-    margin: 0 20px;
-    width: 33.333%;
 }
 
-.form__input {
+.form__label--message {
     margin: 0 20px;
 }
 
+.form__input--data {
+    width: 100%;
+    margin-right: 20px;
+}
 
 .form__role,
 .form__sms {
@@ -547,7 +557,7 @@ tr:nth-child(2n) {
 }
 
 .form__textarea {
-    width: 595px;
+    width: 100%;
     margin: 0 20px 30px;
 }
 
@@ -560,7 +570,7 @@ tr:nth-child(2n) {
     width: 130px;
     height: 35px;
     margin-bottom: 60px;
-    margin-left: 490px;
+    margin-left: 790px;
 }
 
 .form__button:hover {
