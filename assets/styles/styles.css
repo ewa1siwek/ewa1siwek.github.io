@@ -526,12 +526,26 @@ tr:nth-child(2n) {
     margin: 0 20px;
 }
 
+
 .form__data-item {
     display: inline-block;
     float: left;
     position: relative;
     width: 33.333%;
 }
+
+.form__data-item--name {
+    padding-right: 20px;
+}
+
+.form__data-item--phone {
+    padding: 0 10px;
+}
+
+.form__data-item--email {
+    padding-left: 20px;
+}
+
 
 .form__label {
     line-height: 35px;
