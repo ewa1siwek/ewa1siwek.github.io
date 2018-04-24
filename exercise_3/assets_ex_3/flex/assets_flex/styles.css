@@ -1,0 +1,92 @@
+[class*='-item'] {
+    margin: 5px;
+    padding: 10px;
+    float: left;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+
+}
+@media screen and (max-width: 1200px) {
+    .row {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .row {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        max-width: 720px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .row {
+        max-width: 540px;
+    }
+}
+
+.blue-item {
+    height: 100px;
+    background: blue;
+}
+
+@media only screen and (min-width: 768px) {
+    .row--blue {
+        flex-direction: row;
+    }
+    .blue-item {
+        width: 50%;
+    }
+}
+
+.orange-item {
+    height: 200px;
+    background: orange;
+}
+
+.green-item {
+    height: 200px;
+    background: green;
+    width: 100%;
+
+}
+
+@media screen and (min-width: 768px) {
+    .row--green {
+        flex-direction: row;
+    }
+
+    .green-item {
+        width: 33.333%;
+    }
+}
+
+.row--red {
+    flex-flow: row wrap;
+}
+.red-item {
+    width: 50%;
+    height: 150px;
+    background: red;
+
+}
+
+@media screen and (min-width: 768px) {
+    .red-item {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hide {
+        display: none;
+    }
+}
