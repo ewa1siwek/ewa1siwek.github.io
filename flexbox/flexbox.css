@@ -1,5 +1,5 @@
 [class*='-item'] {
-    margin: 5px;
+    margin: 15px;
     padding: 10px;
     float: left;
     flex: 1;
@@ -8,8 +8,8 @@
 .row {
     display: flex;
     flex-direction: column;
-
 }
+
 @media screen and (max-width: 1200px) {
     .row {
         max-width: 1140px;

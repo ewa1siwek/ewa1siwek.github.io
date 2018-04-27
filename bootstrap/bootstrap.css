@@ -1,0 +1,23 @@
+[class^='col'] {
+    padding: 10px;
+}
+
+.blue {
+    height: 150px;
+    background: blue;
+}
+
+.orange {
+    height: 200px;
+    background: orange;
+}
+
+.green {
+    height: 200px;
+    background: green;
+}
+
+.red {
+    height: 150px;
+    background: red;
+}
