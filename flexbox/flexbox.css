@@ -1,36 +1,21 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 [class*='-item'] {
     margin: 15px;
     padding: 10px;
     float: left;
-    flex: 1;
 }
 
 .row {
     display: flex;
+    width: 100%;
     flex-direction: column;
-}
-
-@media screen and (max-width: 1200px) {
-    .row {
-        max-width: 1140px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .row {
-        max-width: 960px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .row {
-        max-width: 720px;
-    }
-}
-@media screen and (max-width: 576px) {
-    .row {
-        max-width: 540px;
-    }
 }
 
 .blue-item {
@@ -38,7 +23,7 @@
     background: blue;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .row--blue {
         flex-direction: row;
     }
@@ -55,8 +40,6 @@
 .green-item {
     height: 200px;
     background: green;
-    width: 100%;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -72,20 +55,28 @@
 .row--red {
     flex-flow: row wrap;
 }
+
 .red-item {
-    width: 50%;
     height: 150px;
     background: red;
-
+    width: calc(50% - 30px);
 }
 
 @media screen and (min-width: 768px) {
+    .row--red {
+        flex-direction: row;
+    }
+
     .red-item {
-        width: 25%;
+        width: calc(25% - 30px);
     }
 }
 
 @media screen and (max-width: 576px) {
+    .red-item {
+        width: 100%;
+    }
+
     .hide {
         display: none;
     }
