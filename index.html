@@ -5,9 +5,41 @@
     <title>Exercise 8</title>
 </head>
 <body>
+<input id="conatact-first_name" />
+<input id="conatact-last_name" />
+<input id="conatact-phone" />
+<input id="conatact-email" />
+<button id="add-contact">Dodaj kontakt</button>
+
 <ul id="contacts"></ul>
 <script>
     var container = document.getElementById('contacts');
+    var addContactBtn = document.getElementById('add-contact');
+    var contactInputFirst = document.querySelector('#conatact-first_name');
+    var contactInputLast = document.querySelector('#conatact-last_name');
+    var contactInputPhone = document.querySelector('#conatact-phone');
+    var contactInputEmail = document.querySelector('#conatact-email');
+
+    addContactBtn.addEventListener('click', addContact);
+
+    function addContact() {
+        var contact = {
+            firstName: contactInputFirst.value,
+            lastName: contactInputLast.value,
+            phoneNumber: contactInputPhone.value,
+            email: contactInputEmail.value
+        };
+
+
+        fetch(
+            'http://localhost:3000/contacts', {
+                method: 'POST',
+                body: JSON.stringify(contact),
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            })
+    }
 
     function getContacts() {
         return fetch(
