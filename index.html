@@ -2,21 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exercise_3</title>
-    <meta name="description" content="exercise_3">
-    <meta name="author" content="ewa siwek">
+    <title>Exercise 8</title>
 </head>
 <body>
-<<<<<<< Updated upstream
-    <ul>
-        <li><a href='flexbox/flexbox.html'>Flexbox</a></li>
-        <li><a href='bootstrap/bootstrap.html'>Bootstrap</a></li>
-    </ul>
-=======
 <ul id="contacts"></ul>
 <script>
+    var container = document.getElementById('contacts');
+
+    function getContacts() {
+        return fetch(
+            'http://localhost:3000/contacts'
+        ).then(
+            function (response) {
+                return response.json();
+            }
+        )
+    }
+
+    function displayContacts(contacts) {
+        contacts.forEach(function (contact) {
+            var first = document.createElement('li');
+            first.innerHTML = 'imię: ' + contact.firstName;
+            container.appendChild(first);
+            var last = document.createElement('li');
+            last.innerHTML = 'nazwisko: ' + contact.lastName;
+            container.appendChild(last);
+            var phone = document.createElement('li');
+            phone.innerHTML = 'numer telefonu: ' + contact.phoneNumber;
+            container.appendChild(phone);
+            var email = document.createElement('li');
+            email.innerHTML = 'e-mail: ' + contact.email;
+            container.appendChild(email);
+        });
+    }
+    getContacts().then(displayContacts);
 
 </script>
->>>>>>> Stashed changes
 </body>
 </html>
