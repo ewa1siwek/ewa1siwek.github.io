@@ -8,32 +8,11 @@
       "email": "seba@mail.com"
     },
     {
-      "firstName": "ewa",
-      "lastName": "siwek",
-      "phoneNumber": "g",
-      "email": "nn",
-      "id": 2
-    },
-    {
-      "firstName": "d",
-      "lastName": "ad",
+      "firstName": "l",
+      "lastName": "s",
       "phoneNumber": "k",
-      "email": "c",
-      "id": 3
-    },
-    {
-      "firstName": "d",
-      "lastName": "x",
-      "phoneNumber": "v",
-      "email": "k",
+      "email": "l",
       "id": 4
-    },
-    {
-      "firstName": "f",
-      "lastName": "ż",
-      "phoneNumber": "k",
-      "email": "s",
-      "id": 5
     }
   ]
 }

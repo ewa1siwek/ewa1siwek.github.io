@@ -50,7 +50,18 @@
                 headers:{
                     'Content-Type': 'application/json'
                 }
-            })
+            }).then(syncContacts);
+    }
+
+    function deleteContact(contactId) {
+        fetch(
+            'http://localhost:3000/contacts/' + contactId, {
+                method: 'DELETE',
+                headers:{
+                    'Content-Type': 'application/json'
+                }
+            }
+        ).then(syncContacts)
     }
 
     function getContacts() {
@@ -62,6 +73,7 @@
             }
         )
     }
+
     function displayContacts(contacts) {
         function compareLastNames(a, b) {
             a = a.toLowerCase();
@@ -86,8 +98,14 @@
             var email = document.createElement('li');
             email.innerHTML = 'e-mail: ' + contact.email;
             container.appendChild(email);
-        });
-        syncContacts();
+            var deleteBtn = document.createElement('button');
+            deleteBtn.innerText = 'Usuń';
+            first.appendChild(deleteBtn);
+
+            deleteBtn.addEventListener('click', function () {
+                deleteContact(contact.id);
+            })
+        })
     }
 
     function syncContacts() {
