@@ -10,7 +10,7 @@
     {
       "firstName": "Maciej",
       "lastName": "Arendt",
-      "phoneNumber": "500500500",
+      "phoneNumber": "600500500",
       "email": "email@gmail.com",
       "id": 4
     },
@@ -22,10 +22,10 @@
       "id": 6
     },
     {
-      "firstName": "Jan",
+      "firstName": "Anna",
       "lastName": "Nowak",
-      "phoneNumber": "400400505",
-      "email": "e-mail@gmail.com",
+      "phoneNumber": "700800900",
+      "email": "ema@wp.pl",
       "id": 7
     }
   ]

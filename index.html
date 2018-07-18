@@ -74,7 +74,7 @@
         )
     }
 
-    function displayContacts(contacts) {
+    function sortByLastName(contacts) {
         function compareLastNames(a, b) {
             a = a.toLowerCase();
             b = b.toLowerCase();
@@ -83,28 +83,36 @@
         contacts.sort(function(a, b) {
             return compareLastNames(a.lastName, b.lastName);
         });
+    }
 
+    function displayContacts(contacts) {
+        sortByLastName(contacts);
         container.innerHTML = '';
         contacts.forEach(function (contact) {
             var first = document.createElement('li');
-            first.innerHTML = 'imię: ' + contact.firstName;
-            container.appendChild(first);
             var last = document.createElement('li');
-            last.innerHTML = 'nazwisko: ' + contact.lastName;
-            container.appendChild(last);
             var phone = document.createElement('li');
-            phone.innerHTML = 'numer telefonu: ' + contact.phoneNumber;
-            container.appendChild(phone);
             var email = document.createElement('li');
-            email.innerHTML = 'e-mail: ' + contact.email;
-            container.appendChild(email);
+
             var deleteBtn = document.createElement('button');
+
+            first.innerHTML = 'imię: ' + contact.firstName;
+            last.innerHTML = 'nazwisko: ' + contact.lastName;
+            phone.innerHTML = 'numer telefonu: ' + contact.phoneNumber;
+            email.innerHTML = 'e-mail: ' + contact.email;
+
+            container.appendChild(first);
+            container.appendChild(last);
+            container.appendChild(phone);
+            container.appendChild(email);
+
+
             deleteBtn.innerText = 'Usuń';
             first.appendChild(deleteBtn);
 
             deleteBtn.addEventListener('click', function () {
                 deleteContact(contact.id);
-            })
+            });
 
             var editBtn = document.createElement('button');
             editBtn.innerText = 'Edytuj';
@@ -112,21 +120,24 @@
             editBtn.addEventListener('click', function () {
                 var editForm = document.createElement('div');
                 var inputFirst = document.createElement('input');
-                inputFirst.value = contact.firstName;
                 var inputLast = document.createElement('input');
-                inputLast.value = contact.lastName;
                 var inputPhone = document.createElement('input');
-                inputPhone.value = contact.phoneNumber;
                 var inputEmail = document.createElement('input');
-                inputEmail.value = contact.email;
 
                 var saveBtn = document.createElement('button');
+
+                inputFirst.value = contact.firstName;
+                inputLast.value = contact.lastName;
+                inputPhone.value = contact.phoneNumber;
+                inputEmail.value = contact.email;
+
                 saveBtn.innerText = 'Zapisz';
 
                 editForm.appendChild(inputFirst);
                 editForm.appendChild(inputLast);
                 editForm.appendChild(inputPhone);
                 editForm.appendChild(inputEmail);
+
                 editForm.appendChild(saveBtn);
 
                 email.appendChild(editForm);
