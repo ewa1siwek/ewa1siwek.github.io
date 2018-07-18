@@ -8,53 +8,11 @@
       "email": "seba@mail.com"
     },
     {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": {},
+      "firstName": "Ewa",
+      "lastName": "Siwek",
+      "phoneNumber": "670-122-156",
+      "email": "ew.siwek@gmail.com",
       "id": 2
-    },
-    {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": {},
-      "id": 3
-    },
-    {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": {},
-      "id": 4
-    },
-    {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": {},
-      "id": 5
-    },
-    {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": {},
-      "id": 6
-    },
-    {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": {},
-      "id": 7
-    },
-    {
-      "firstName": "d",
-      "lastName": "d",
-      "phoneNumber": "d",
-      "email": "f",
-      "id": 8
     }
   ]
 }

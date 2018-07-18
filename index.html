@@ -10,8 +10,8 @@
 <input id="conatact-phone" />
 <input id="conatact-email" />
 <button id="add-contact">Dodaj kontakt</button>
-
 <ul id="contacts"></ul>
+
 <script>
     var container = document.getElementById('contacts');
     var addContactBtn = document.getElementById('add-contact');
@@ -22,6 +22,8 @@
 
     addContactBtn.addEventListener('click', addContact);
 
+    syncContacts();
+
     function addContact() {
         var contact = {
             firstName: contactInputFirst.value,
@@ -29,7 +31,10 @@
             phoneNumber: contactInputPhone.value,
             email: contactInputEmail.value
         };
-
+        contactInputFirst.value = '';
+        contactInputLast.value = '';
+        contactInputPhone.value = '';
+        contactInputEmail.value = '';
 
         fetch(
             'http://localhost:3000/contacts', {
@@ -38,7 +43,7 @@
                 headers:{
                     'Content-Type': 'application/json'
                 }
-            })
+            }).then(function () { syncContacts() })
     }
 
     function getContacts() {
@@ -52,6 +57,7 @@
     }
 
     function displayContacts(contacts) {
+        container.innerHTML = '';
         contacts.forEach(function (contact) {
             var first = document.createElement('li');
             first.innerHTML = 'imię: ' + contact.firstName;
@@ -67,7 +73,10 @@
             container.appendChild(email);
         });
     }
-    getContacts().then(displayContacts);
+
+    function syncContacts() {
+        getContacts().then(displayContacts);
+    }
 
 </script>
 </body>
