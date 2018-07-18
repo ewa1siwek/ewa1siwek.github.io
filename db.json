@@ -1,18 +1,32 @@
 {
   "contacts": [
     {
-      "id": 1,
       "firstName": "Sebastian",
       "lastName": "Kreft",
       "phoneNumber": "500-600-700",
-      "email": "seba@mail.com"
+      "email": "seba@mail.com",
+      "id": 1
     },
     {
-      "firstName": "l",
-      "lastName": "s",
-      "phoneNumber": "k",
-      "email": "l",
+      "firstName": "Maciej",
+      "lastName": "Arendt",
+      "phoneNumber": "500500500",
+      "email": "email@gmail.com",
       "id": 4
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "phoneNumber": "500500500",
+      "email": "e-mail@gmail.com",
+      "id": 6
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Nowak",
+      "phoneNumber": "400400505",
+      "email": "e-mail@gmail.com",
+      "id": 7
     }
   ]
 }

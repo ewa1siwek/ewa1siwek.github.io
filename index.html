@@ -105,6 +105,51 @@
             deleteBtn.addEventListener('click', function () {
                 deleteContact(contact.id);
             })
+
+            var editBtn = document.createElement('button');
+            editBtn.innerText = 'Edytuj';
+            email.appendChild(editBtn);
+            editBtn.addEventListener('click', function () {
+                var editForm = document.createElement('div');
+                var inputFirst = document.createElement('input');
+                inputFirst.value = contact.firstName;
+                var inputLast = document.createElement('input');
+                inputLast.value = contact.lastName;
+                var inputPhone = document.createElement('input');
+                inputPhone.value = contact.phoneNumber;
+                var inputEmail = document.createElement('input');
+                inputEmail.value = contact.email;
+
+                var saveBtn = document.createElement('button');
+                saveBtn.innerText = 'Zapisz';
+
+                editForm.appendChild(inputFirst);
+                editForm.appendChild(inputLast);
+                editForm.appendChild(inputPhone);
+                editForm.appendChild(inputEmail);
+                editForm.appendChild(saveBtn);
+
+                email.appendChild(editForm);
+
+                saveBtn.addEventListener('click', function () {
+                    var updatedContact = {
+                        firstName: inputFirst.value,
+                        lastName: inputLast.value,
+                        phoneNumber: inputPhone.value,
+                        email: inputEmail.value
+                    };
+
+                    fetch(
+                        'http://localhost:3000/contacts/' + contact.id, {
+                            method: 'PATCH',
+                            body: JSON.stringify(updatedContact),
+                            headers:{
+                                'Content-Type': 'application/json'
+                            }
+                        }
+                    ).then(syncContacts)
+                })
+            });
         })
     }
 
