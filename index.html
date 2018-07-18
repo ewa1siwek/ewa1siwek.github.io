@@ -62,8 +62,16 @@
             }
         )
     }
-
     function displayContacts(contacts) {
+        function compareLastNames(a, b) {
+            a = a.toLowerCase();
+            b = b.toLowerCase();
+            return (a < b) ? -1 : (a > b) ? 1 : 0;
+        }
+        contacts.sort(function(a, b) {
+            return compareLastNames(a.lastName, b.lastName);
+        });
+
         container.innerHTML = '';
         contacts.forEach(function (contact) {
             var first = document.createElement('li');
