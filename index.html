@@ -20,9 +20,16 @@
     var contactInputPhone = document.querySelector('#conatact-phone');
     var contactInputEmail = document.querySelector('#conatact-email');
 
-    addContactBtn.addEventListener('click', addContact);
+    addContactBtn.addEventListener('click', validatedInput);
 
     syncContacts();
+
+    function validatedInput() {
+        if(contactInputFirst.value.length > 0 && contactInputLast.value.length > 0
+            && contactInputPhone.value.length > 0 && contactInputEmail.value.length > 0) {
+            addContact();
+        }
+    }
 
     function addContact() {
         var contact = {
@@ -43,7 +50,7 @@
                 headers:{
                     'Content-Type': 'application/json'
                 }
-            }).then(function () { syncContacts() })
+            })
     }
 
     function getContacts() {
@@ -72,6 +79,7 @@
             email.innerHTML = 'e-mail: ' + contact.email;
             container.appendChild(email);
         });
+        syncContacts();
     }
 
     function syncContacts() {
