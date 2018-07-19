@@ -23,8 +23,6 @@ function validatedInput() {
     if(contactInputFirst.value.length > 0 && contactInputLast.value.length > 0
         && contactInputPhone.value.length > 0 && contactInputEmail.value.length > 0) {
         addContact();
-    } else {
-        alert('Musisz wypełnić wszystkie pola')
     }
 }
 
@@ -100,8 +98,8 @@ function displayContacts(contacts) {
         var deleteBtn = document.createElement('button');
         var btnContainer = document.createElement('div');
 
-        first.innerHTML = 'imię: ' + contact.firstName;
-        last.innerHTML = 'nazwisko: ' + contact.lastName;
+        first.innerHTML = 'imię: ' + (contact.firstName[0].toUpperCase() + contact.firstName.substring(1));
+        last.innerHTML = 'nazwisko: ' + (contact.lastName[0].toUpperCase() + contact.lastName.substring(1));
         phone.innerHTML = 'numer telefonu: ' + contact.phoneNumber;
         email.innerHTML = 'e-mail: ' + contact.email;
 
@@ -115,6 +113,7 @@ function displayContacts(contacts) {
 
         first.classList.add('first');
         last.classList.add('last');
+        contactContainer.classList.add('container__contact')
 
         var editBtn = document.createElement('button');
         editBtn.innerText = 'Edytuj';

@@ -18,6 +18,10 @@ body {
     padding: 20px;
 }
 
+.container__contact {
+    border-bottom: 1px solid #896D1D ;
+}
+
 .container__contact-on {
     background-color: #C9BC98;
     padding: 5px 20px 20px 20px;
