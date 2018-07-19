@@ -110,7 +110,7 @@ function displayContacts(contacts) {
             deleteContact(contact.id);
         });
 
-        function editForm() {
+        function editedForm() {
             var editForm = document.createElement('div');
             var inputFirst = document.createElement('input');
             var inputLast = document.createElement('input');
@@ -134,8 +134,7 @@ function displayContacts(contacts) {
 
             editForm.appendChild(saveBtn);
             email.appendChild(editForm);
-
-            editBtn.removeEventListener('click', editForm);
+            editBtn.removeEventListener('click', editedForm);
 
             saveBtn.addEventListener('click', function () {
                 var updatedContact = {
@@ -156,7 +155,7 @@ function displayContacts(contacts) {
                 ).then(syncContacts)
             });
     }
-        editBtn.addEventListener('click', editForm);
+        editBtn.addEventListener('click', editedForm);
     })
 }
 
