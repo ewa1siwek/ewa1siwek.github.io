@@ -76,6 +76,7 @@ function displayContacts(contacts) {
     sortByLastName(contacts);
     container.innerHTML = '';
     contacts.forEach(function (contact) {
+        var contactContainer = document.createElement('div');
         var first = document.createElement('li');
         var last = document.createElement('li');
         var phone = document.createElement('li');
@@ -89,43 +90,68 @@ function displayContacts(contacts) {
         phone.innerHTML = 'numer telefonu: ' + contact.phoneNumber;
         email.innerHTML = 'e-mail: ' + contact.email;
 
-        container.appendChild(first);
-        container.appendChild(last);
-        container.appendChild(phone);
-        container.appendChild(email);
-        container.appendChild(btnContainer);
+        container.appendChild(contactContainer);
+        contactContainer.appendChild(first);
+        contactContainer.appendChild(last);
+        contactContainer.appendChild(phone);
+        contactContainer.appendChild(email);
+        contactContainer.appendChild(btnContainer);
 
         first.classList.add('first');
+        last.classList.add('last');
 
         var editBtn = document.createElement('button');
         editBtn.innerText = 'Edytuj';
         btnContainer.appendChild(editBtn);
-        editBtn.classList.add('edit');
+        editBtn.classList.add('edit_btn');
 
         deleteBtn.innerText = 'Usuń';
         btnContainer.appendChild(deleteBtn);
-        deleteBtn.classList.add('delete');
+        deleteBtn.classList.add('delete_btn');
 
         deleteBtn.addEventListener('click', function () {
             deleteContact(contact.id);
         });
 
+        function changeBackgroundOn() {
+            contactContainer.classList.add('container__contact-on');
+        }
+
+        function changeBackgroundOut() {
+            contactContainer.classList.remove('container__contact-on');
+        }
+
+        contactContainer.addEventListener('mouseover', changeBackgroundOn);
+        contactContainer.addEventListener('mouseout', changeBackgroundOut);
+
+
         function editedForm() {
             var editForm = document.createElement('div');
-            var inputFirst = document.createElement('input');
-            var inputLast = document.createElement('input');
-            var inputPhone = document.createElement('input');
-            var inputEmail = document.createElement('input');
+            var editInputs;
+            var inputFirst;
+            var inputLast;
+            var inputPhone;
+            var inputEmail;
+            editInputs = [
+                (inputFirst = document.createElement('input')),
+                (inputLast = document.createElement('input')),
+                (inputPhone = document.createElement('input')),
+                (inputEmail = document.createElement('input'))
+            ];
+            editInputs.map(function (el) {
+                el.classList.add('edit_input');
+            });
+
 
             var saveBtn = document.createElement('button');
-
             inputFirst.value = contact.firstName;
             inputLast.value = contact.lastName;
             inputPhone.value = contact.phoneNumber;
             inputEmail.value = contact.email;
 
+
             saveBtn.innerText = 'Zapisz';
-            saveBtn.classList.add('mainBtn');
+            saveBtn.classList.add('btn__main');
 
             editForm.appendChild(inputFirst);
             editForm.appendChild(inputLast);

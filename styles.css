@@ -5,7 +5,25 @@ body {
     margin: 20px;
 }
 
-.mainBtn {
+.form__head {
+    height: 60px;
+    line-height: 57px;
+    padding-left: 10px;
+    background-color: #896D1D;
+    border-bottom: 3px solid #7D641B;
+}
+
+.container__contacts {
+    background-color: #DED7C1;
+    padding: 20px;
+}
+
+.container__contact-on {
+    background-color: #C9BC98;
+    padding: 5px 20px 20px 20px;
+}
+
+.btn__main {
     width: 100px;
 }
 
@@ -13,8 +31,15 @@ body {
     margin-top: 20px;
 }
 
-.delete,
-.edit {
+.last {
+    font-weight: bold;
+}
+.delete_btn,
+.edit_btn {
     margin: 10px 15px;
+}
+
+.edit_input {
+    margin-right: 3px;
 }
 
