@@ -1,20 +1,6 @@
 {
   "contacts": [
     {
-      "firstName": "Sebastian",
-      "lastName": "Kreft",
-      "phoneNumber": "500-600-700",
-      "email": "seba@mail.com",
-      "id": 1
-    },
-    {
-      "firstName": "Maciej",
-      "lastName": "Arendt",
-      "phoneNumber": "600500500",
-      "email": "email@gmail.com",
-      "id": 4
-    },
-    {
       "firstName": "Jan",
       "lastName": "Kowalski",
       "phoneNumber": "500500500",
@@ -22,11 +8,25 @@
       "id": 6
     },
     {
-      "firstName": "Anna",
+      "firstName": "Agata",
       "lastName": "Nowak",
-      "phoneNumber": "700800900",
-      "email": "ema@wp.pl",
+      "phoneNumber": "550550550",
+      "email": "email@email.com",
       "id": 7
+    },
+    {
+      "firstName": "Piotr",
+      "lastName": "Zieliński",
+      "phoneNumber": "400404040",
+      "email": "email@email.co",
+      "id": 8
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Adamiecka",
+      "phoneNumber": "40403201",
+      "email": "email@gmail.com",
+      "id": 9
     }
   ]
 }
