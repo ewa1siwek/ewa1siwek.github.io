@@ -1,4 +1,6 @@
 var container = document.getElementById('contacts');
+var removeSelectedButton = document.getElementById('remove-selected');
+
 var addContactBtn = document.getElementById('add-contact');
 var contactInputFirst = document.querySelector('#conatact-first_name');
 var contactInputLast = document.querySelector('#conatact-last_name');
@@ -6,8 +8,16 @@ var contactInputPhone = document.querySelector('#conatact-phone');
 var contactInputEmail = document.querySelector('#conatact-email');
 
 addContactBtn.addEventListener('click', validatedInput);
-
 syncContacts();
+
+removeSelectedButton.addEventListener('click', function () {
+    var checkedCheckboxes = document.querySelectorAll('input:checked');
+
+    checkedCheckboxes.forEach(function (checkbox) {
+        var contactId = checkbox.getAttribute('data__contact--id');
+        deleteContact(contactId);
+    })
+});
 
 function validatedInput() {
     if(contactInputFirst.value.length > 0 && contactInputLast.value.length > 0
@@ -77,6 +87,11 @@ function displayContacts(contacts) {
     container.innerHTML = '';
     contacts.forEach(function (contact) {
         var contactContainer = document.createElement('div');
+
+        var checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.setAttribute('data__contact--id', contact.id);
+
         var first = document.createElement('li');
         var last = document.createElement('li');
         var phone = document.createElement('li');
@@ -91,6 +106,7 @@ function displayContacts(contacts) {
         email.innerHTML = 'e-mail: ' + contact.email;
 
         container.appendChild(contactContainer);
+        first.appendChild(checkbox);
         contactContainer.appendChild(first);
         contactContainer.appendChild(last);
         contactContainer.appendChild(phone);
@@ -138,10 +154,10 @@ function displayContacts(contacts) {
                 (inputPhone = document.createElement('input')),
                 (inputEmail = document.createElement('input'))
             ];
+
             editInputs.map(function (el) {
                 el.classList.add('edit_input');
             });
-
 
             var saveBtn = document.createElement('button');
             inputFirst.value = contact.firstName;

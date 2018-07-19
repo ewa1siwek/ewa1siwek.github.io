@@ -1,13 +1,6 @@
 {
   "contacts": [
     {
-      "firstName": "Jan",
-      "lastName": "Kowalski",
-      "phoneNumber": "500500500",
-      "email": "e-mail@gmail.com",
-      "id": 6
-    },
-    {
       "firstName": "Agata",
       "lastName": "Nowak",
       "phoneNumber": "550550550",
@@ -22,11 +15,18 @@
       "id": 8
     },
     {
-      "firstName": "Anna",
-      "lastName": "Adamiecka",
-      "phoneNumber": "40403201",
-      "email": "email@gmail.com",
+      "firstName": "Ewa",
+      "lastName": "Siwek",
+      "phoneNumber": "708090929",
+      "email": "email@wp.pl",
       "id": 9
+    },
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "phoneNumber": "7890345765",
+      "email": "ff@gmail.com",
+      "id": 10
     }
   ]
 }
