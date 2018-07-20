@@ -1,39 +1,18 @@
 {
   "contacts": [
     {
-      "firstName": "Jan",
-      "lastName": "Kowalski",
-      "phoneNumber": "7890345765",
-      "email": "ff@gmail.com",
-      "id": 10
-    },
-    {
-      "firstName": "dagmara",
-      "lastName": "matuszak",
-      "phoneNumber": "d",
-      "email": "d",
-      "id": 12
-    },
-    {
-      "firstName": "Piotr",
-      "lastName": "aa",
-      "phoneNumber": "d",
-      "email": "dd",
-      "id": 14
-    },
-    {
       "firstName": "c",
-      "lastName": "v",
-      "phoneNumber": "693762610",
-      "email": "ew.siwek@gmail.com",
-      "id": 15
+      "lastName": "ckkk",
+      "phoneNumber": "0000000000009",
+      "email": "www",
+      "id": 23
     },
     {
-      "firstName": "ddd",
-      "lastName": "ddd",
-      "phoneNumber": "d",
-      "email": "d",
-      "id": 16
+      "firstName": "Ewa",
+      "lastName": "Siwek",
+      "phoneNumber": "kkppp",
+      "email": "ew.siwek@gmail.com",
+      "id": 24
     }
   ]
 }

@@ -155,9 +155,10 @@ function displayContacts(contacts) {
                 (inputEmail = document.createElement('input'))
             ];
 
-            editForm.setAttribute('action', '');
+            inputPhone.setAttribute('pattern', '^[0-9-+s()]*$');
             editInputs.map(function (el) {
                 el.classList.add('edit_input');
+                el.setAttribute('required', '');
             });
 
             var saveBtn = document.createElement('button');

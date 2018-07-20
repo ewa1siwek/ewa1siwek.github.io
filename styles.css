@@ -76,7 +76,7 @@ body {
     border: #7D641B solid 1px;
 }
 
-.checkbox:checked::before {
+.checkbox:checked {
     height: 18px;
     width: 18px;
     position: absolute;
