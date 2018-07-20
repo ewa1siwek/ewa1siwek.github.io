@@ -169,7 +169,7 @@ function displayContacts(contacts) {
 
 
             saveBtn.innerText = 'Zapisz';
-            saveBtn.classList.add('btn__main');
+            saveBtn.classList.add('main_btn');
 
             editForm.appendChild(inputFirst);
             editForm.appendChild(inputLast);
