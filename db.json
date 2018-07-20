@@ -1,20 +1,6 @@
 {
   "contacts": [
     {
-      "firstName": "Agata",
-      "lastName": "Nowak",
-      "phoneNumber": "550550550",
-      "email": "email@email.com",
-      "id": 7
-    },
-    {
-      "firstName": "Piotr",
-      "lastName": "Zieliński",
-      "phoneNumber": "400404040",
-      "email": "email@email.co",
-      "id": 8
-    },
-    {
       "firstName": "Jan",
       "lastName": "Kowalski",
       "phoneNumber": "7890345765",
@@ -23,24 +9,31 @@
     },
     {
       "firstName": "Anna",
-      "lastName": "Adamczyk",
-      "phoneNumber": "7223239909",
-      "email": "mail@mail.com",
+      "lastName": "Nowak",
+      "phoneNumber": "ddd",
+      "email": "ss",
       "id": 11
     },
     {
-      "firstName": "jan",
-      "lastName": "nowak",
-      "phoneNumber": "cc",
-      "email": "s",
+      "firstName": "dagmara",
+      "lastName": "matuszak",
+      "phoneNumber": "d",
+      "email": "d",
       "id": 12
     },
     {
-      "firstName": "ewa",
-      "lastName": "asc",
-      "phoneNumber": "bd",
-      "email": "nj",
+      "firstName": "Paweł",
+      "lastName": "zieliński",
+      "phoneNumber": "789jkd",
+      "email": "ggg",
       "id": 13
+    },
+    {
+      "firstName": "Piotr",
+      "lastName": "Arendt",
+      "phoneNumber": "566900568",
+      "email": "jklsdlklkds",
+      "id": 14
     }
   ]
 }

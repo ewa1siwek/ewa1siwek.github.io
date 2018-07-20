@@ -25,6 +25,7 @@ body {
 .container__contact-on {
     background-color: #C9BC98;
     padding: 5px 20px 20px 20px;
+    transition: all 200ms ease-out;
 }
 
 .btn__main {
@@ -38,6 +39,7 @@ body {
 .last {
     font-weight: bold;
 }
+
 .delete_btn,
 .edit_btn {
     margin: 10px 15px;
@@ -47,3 +49,40 @@ body {
     margin-right: 3px;
 }
 
+@keyframes click-wave {
+    0% {
+        height: 18px;
+        width: 18px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 50px;
+        width: 50px;
+        margin-left: -20px;
+        margin-top: -20px;
+        opacity: 0;
+    }
+}
+
+.checkbox {
+    height: 18px;
+    width: 18px;
+    margin-left: 200px;
+    background: #DED7C1;
+    color: #896D1D ;
+    cursor: pointer;
+    position: absolute;
+    border: #7D641B solid 1px;
+}
+
+.checkbox:checked::before {
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+}

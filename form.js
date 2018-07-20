@@ -86,9 +86,10 @@ function displayContacts(contacts) {
     contacts.forEach(function (contact) {
         var contactContainer = document.createElement('div');
 
-        var checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.setAttribute('data__contact--id', contact.id);
+        var checkboxInput = document.createElement('input');
+        checkboxInput.type = 'checkbox';
+        checkboxInput.classList.add('checkbox');
+        checkboxInput.setAttribute('data__contact--id', contact.id);
 
         var first = document.createElement('li');
         var last = document.createElement('li');
@@ -104,7 +105,7 @@ function displayContacts(contacts) {
         email.innerHTML = 'e-mail: ' + contact.email;
 
         container.appendChild(contactContainer);
-        first.appendChild(checkbox);
+        first.prepend(checkboxInput);
         contactContainer.appendChild(first);
         contactContainer.appendChild(last);
         contactContainer.appendChild(phone);
