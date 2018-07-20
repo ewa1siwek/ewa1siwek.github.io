@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="form__head">
-    <input id="conatact-first_name" class="input" placeholder="imię"/>
-    <input id="conatact-last_name" class="input" placeholder="nazwisko"/>
-    <input id="conatact-phone" class="input" placeholder="numer telefonu"/>
-    <input id="conatact-email" class="input" placeholder="e-mail"/>
+<form action="" class="form__head">
+    <input required id="contact-first_name" class="input" placeholder="imię"/>
+    <input required id="contact-last_name" class="input" placeholder="nazwisko"/>
+    <input required id="contact-phone" class="input" placeholder="numer telefonu"/>
+    <input required type="email" name="email" id="contact-email" class="input" placeholder="e-mail"/>
     <button id="add-contact" class="mainBtn">Dodaj kontakt</button>
     <button id="remove-selected" class="btn__checkbox">Usuń zaznaczone</button>
-</div>
+</form>
 <ul id="contacts" class="container__contacts"></ul>
 
 <script src="form.js"></script>

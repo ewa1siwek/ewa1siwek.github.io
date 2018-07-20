@@ -2,10 +2,10 @@ var container = document.getElementById('contacts');
 var removeSelectedButton = document.getElementById('remove-selected');
 
 var addContactBtn = document.getElementById('add-contact');
-var contactInputFirst = document.querySelector('#conatact-first_name');
-var contactInputLast = document.querySelector('#conatact-last_name');
-var contactInputPhone = document.querySelector('#conatact-phone');
-var contactInputEmail = document.querySelector('#conatact-email');
+var contactInputFirst = document.querySelector('#contact-first_name');
+var contactInputLast = document.querySelector('#contact-last_name');
+var contactInputPhone = document.querySelector('#contact-phone');
+var contactInputEmail = document.querySelector('#contact-email');
 
 addContactBtn.addEventListener('click', validatedInput);
 syncContacts();
@@ -142,7 +142,7 @@ function displayContacts(contacts) {
 
 
         function editedForm() {
-            var editForm = document.createElement('div');
+            var editForm = document.createElement('form');
             var editInputs;
             var inputFirst;
             var inputLast;
@@ -155,6 +155,7 @@ function displayContacts(contacts) {
                 (inputEmail = document.createElement('input'))
             ];
 
+            editForm.setAttribute('action', '');
             editInputs.map(function (el) {
                 el.classList.add('edit_input');
             });
