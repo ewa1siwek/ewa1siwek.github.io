@@ -29,6 +29,20 @@ class App extends Component {
         <React.Fragment>
           <AppHeader />
           <InputBar />
+            <ul>
+                {
+                    this.state.contacts.map(
+                        contact => (
+                            <li key={contact.id}>
+                                {contact.firstName}
+                                {contact.lastName}
+                                {contact.phoneNumber}
+                                {contact.email}
+                            </li>
+                        )
+                    )
+                }
+            </ul>
         </React.Fragment>
 
       </div>
