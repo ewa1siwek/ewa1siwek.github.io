@@ -20,22 +20,42 @@ class ContactList extends React.Component{
         ]
     }
 
+    handleSubmit = event => {
+        event.preventDefault()
+
+        this.setState({
+            contacts: this.state.contacts.concat({
+                id: Date.now().toString(32),
+                firstName: this.state.contactFormValue,
+            })
+        })
+    }
+
     render () {
         return (
-            <ul>
-                {
-                    this.state.contacts.map(
-                        contact => (
-                            <li key={contact.id}>
-                                {contact.firstName}
-                                {contact.lastName}
-                                {contact.phoneNumber}
-                                {contact.email}
-                            </li>
+            <React.Fragment>
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        type="text"
+                        value={this.state.contactFormValue}
+                        onChange={(event) => this.setState({
+                            contactFormValue: event.currentTarget.value
+                        })}
+                    />
+                </form>
+
+                <ul>
+                    {
+                        this.state.contacts.map(
+                            contact => (
+                                <li key={contact.id}>
+                                    {contact.firstName}
+                                </li>
+                            )
                         )
-                    )
-                }
-            </ul>
+                    }
+                </ul>
+            </React.Fragment>
         )
     }
 }
