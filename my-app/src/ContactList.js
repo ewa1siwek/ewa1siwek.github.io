@@ -2,7 +2,10 @@ import React from 'react'
 
 class ContactList extends React.Component{
     state = {
-        contactFormValue: '',
+        firstNameValue: '',
+        lastNameValue: '',
+        phoneNumberValue: '',
+        emailValue: '',
         contacts: [
             {
                 id: '1',
@@ -25,7 +28,10 @@ class ContactList extends React.Component{
         this.setState({
             contacts: this.state.contacts.concat({
                 id: Date.now().toString(32),
-                firstName: this.state.contactFormValue
+                firstName: this.state.firstNameValue,
+                lastName: this.state.lastNameValue,
+                phoneNumber: this.state.phoneNumberValue,
+                email: this.state.emailValue
             })
         })
     }
@@ -38,20 +44,31 @@ class ContactList extends React.Component{
                     <label>imię
                         <input
                             type="text"
-                            value={this.state.contactFormValue}
                             onChange={(event) => this.setState({
-                                contactFormValue: event.currentTarget.value
+                                firstNameValue: event.currentTarget.value,
                             })}
                         />
                     </label>
                     <label>nazwisko
-                        <input type="text"/>
+                        <input type="text"
+                               value={this.state.contactFormValue}
+                               onChange={(event) => this.setState({
+                                   lastNameValue: event.currentTarget.value
+                               })}/>
                     </label>
                     <label>numer telefonu
-                        <input/>
+                        <input
+                            value={this.state.contactFormValue}
+                            onChange={(event) => this.setState({
+                                phoneNumberValue: event.currentTarget.value
+                            })}/>
                     </label>
                     <label>e-mail
-                        <input type="email"/>
+                        <input type="email"
+                               value={this.state.contactFormValue}
+                               onChange={(event) => this.setState({
+                                   emailValue: event.currentTarget.value
+                               })}/>
                     </label>
                     <button>dodaj</button>
 
