@@ -2,6 +2,7 @@ import React from 'react'
 
 class ContactList extends React.Component{
     state = {
+        contactFormValue: '',
         contacts: [
             {
                 id: '1',
@@ -19,13 +20,29 @@ class ContactList extends React.Component{
             },
         ]
     }
+    handleSubmit = event => {
+        event.preventDefault()
+        this.setState({
+            contacts: this.state.contacts.concat({
+                id: Date.now().toString(32),
+                firstName: this.state.contactFormValue
+            })
+        })
+    }
+
 
     render () {
         return (
             <div className="ContactList">
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>imię
-                        <input type="text"/>
+                        <input
+                            type="text"
+                            value={this.state.contactFormValue}
+                            onChange={(event) => this.setState({
+                                contactFormValue: event.currentTarget.value
+                            })}
+                        />
                     </label>
                     <label>nazwisko
                         <input type="text"/>
