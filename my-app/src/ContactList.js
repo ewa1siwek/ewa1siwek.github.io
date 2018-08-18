@@ -66,22 +66,23 @@ class ContactList extends React.Component{
                             emailValue: event.currentTarget.value
                         })}
                     />
-                </form>
+                        <button>Add</button>
 
                 <ul>
                     {
                         this.state.contacts.map(
                             contact => (
                                 <li key={contact.id}>
-                                    {contact.firstName}
-                                    {contact.lastName}
-                                    {contact.phoneNumber}
-                                    {contact.email}
+                                    {contact.firstNameValue}
+                                    {contact.lastNameValue}
+                                    {contact.phoneNumberValue}
+                                    {contact.emailValue}
                                 </li>
                             )
                         )
                     }
                 </ul>
+                </form>
             </React.Fragment>
         )
     }
