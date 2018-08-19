@@ -23,6 +23,7 @@ class ContactList extends React.Component{
             },
         ]
     }
+
     handleSubmit = event => {
         event.preventDefault()
         this.setState({
@@ -35,7 +36,6 @@ class ContactList extends React.Component{
             })
         })
     }
-
 
     render () {
         return (
