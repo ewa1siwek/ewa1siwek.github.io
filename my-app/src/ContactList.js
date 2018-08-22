@@ -2,26 +2,18 @@ import React from 'react'
 
 class ContactList extends React.Component{
     state = {
-        firstNameValue: '',
-        lastNameValue: '',
-        phoneNumberValue: '',
-        emailValue: '',
-        contacts: [
-            {
-                id: '1',
-                firstName: "Sebastian",
-                lastName: "Kreft",
-                phoneNumber: "500-600-700",
-                email: "seba@mail.com"
-            },
-            {
-                id: '2',
-                firstName: "Jan",
-                lastName: "Kowalski",
-                phoneNumber: "500-600-700",
-                email: "mail@mail.com"
-            },
-        ]
+        contacts: []
+    }
+    getContacts() {
+        fetch('http://localhost:3000/contacts')
+            .then(response => response.json())
+            .then(contacts => this.setState({
+                contacts: contacts
+            }));
+    }
+
+    componentDidMount() {
+        this.getContacts()
     }
 
     handleSubmit = event => {
