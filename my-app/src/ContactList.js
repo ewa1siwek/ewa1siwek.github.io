@@ -4,9 +4,13 @@ class ContactList extends React.Component{
     state = {
         contacts: []
     }
+
     getContacts() {
-        fetch('http://localhost:3000/contacts')
-            .then(response => response.json())
+        fetch('http://localhost:3030/contacts')
+            .then(response => {
+                console.log(response)
+                return response.json()
+            })
             .then(contacts => this.setState({
                 contacts: contacts
             }));
